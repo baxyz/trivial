@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Snaps
+sudo snap install node --channel=20/stable --classic
+sudo snap install firefox
+
 # Missing repo
 sudo add-apt-repository ppa:git-core/ppa # newest git for WSL
 sudo add-apt-repository ppa:wslutilities/wslu # WSLu
@@ -10,11 +14,14 @@ sudo apt upgrade
 
 # Missing packages
 sudo apt install \
-    git \ # newest git for WSL
-    x11-apps firefox nautilus \ # GUI
-    wslu \ # WSLu
-    zsh \ # ZSH
-    libtinfo5 libegl1 libxcb-icccm4 libxcb-keysyms1 libxcb-render-util0 libxkbcommon-x11-0 libxcb-xinerama0 # For QT and Sailfish dev
+    # newest git for WSL
+    git \
+    # Desktop
+    gnome-control-center gnome-tweaks \
+    # WSLu
+    wslu \
+    # ZSH
+    zsh
 
 # Change bash to zsh
 sudo -s
