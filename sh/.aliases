@@ -1,0 +1,23 @@
+# WSL
+alias notepad="Notepads.exe"
+alias edit="Notepads.exe"
+alias wsl="wsl.exe"
+
+# Network
+alias theip="ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
+
+# Terminal
+alias clean="printf '\033\143'"
+alias ll='ls -alF'
+
+# Node
+alias npm-upgrade="npx npm-check --global --update-all"
+
+# Git
+alias rebase="git rebase -i --autosquash origin/HEAD"
+alias push="git push --force"
+alias fixup="git commit --fixup "
+
+# Folders
+export helpers4=$HOME/projects/helpers4
+export chat=$HOME/projects/tangle-chat
