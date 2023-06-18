@@ -1,0 +1,11 @@
+variant: fcos
+version: 1.4.0
+passwd:
+  users:
+    - name: berenger
+      groups:
+        - wheel
+        - sudo
+      password_hash: $y$j...
+      ssh_authorized_keys:
+        - ssh-ed25519 AAA...

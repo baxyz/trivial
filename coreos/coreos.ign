@@ -1,0 +1,20 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "groups": [
+          "wheel",
+          "sudo"
+        ],
+        "name": "berenger",
+        "passwordHash": "$y$j...",
+        "sshAuthorizedKeys": [
+          "ssh-ed25519 AAA..."
+        ]
+      }
+    ]
+  }
+}
