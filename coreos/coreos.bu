@@ -9,3 +9,9 @@ passwd:
       password_hash: $y$j...
       ssh_authorized_keys:
         - ssh-ed25519 AAA...
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: coreos
