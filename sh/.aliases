@@ -33,22 +33,3 @@ alias nonogram="yayagram"
 export helpers4=$HOME/projects/helpers4
 export chat=$HOME/projects/tangle-chat
 
-# SNPS commands
-alias vpn="wsl.exe -d wsl-vpnkit --cd /app wsl-vpnkit"
-
-# SNPS telepresence
-alias telc="telepresence connect --kubeconfig=/home/berenger/.kube/us"
-alias tel1="telepresence list -n sigma | grep -oP \".*(?=-slm-ui)\""
-alias tel2="telepresence list -n sigma | grep -oP \".*-slm-ui\""
-alias teli="telepresence intercept ${1:-uidev}-slm-ui --port 4200:80"
-alias tell="telepresence leave ${1:-uidev}-slm-ui"
-alias telq="telepresence quit -s"
-
-# SNPS folders
-export sda=$HOME/projects/siscape
-export ui=$HOME/projects/front/ui
-export uic=$HOME/projects/front/ui-container
-export common=$HOME/projects/front/common
-export ds=$HOME/projects/front/design-system
-export sds=$HOME/projects/front/design-system
-
