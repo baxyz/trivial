@@ -1,7 +1,9 @@
 # WSL
+alias explorer="explorer.exe ."
 alias notepad="Notepads.exe"
 alias edit="Notepads.exe"
 alias wsl="wsl.exe"
+alias shutdown="wsl.exe --shutdown"
 
 # Network
 alias theip="ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
@@ -23,7 +25,30 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
+# Games
+alias tetris="bastet"
+alias nonogram="yayagram"
+
 # Folders
 export helpers4=$HOME/projects/helpers4
 export chat=$HOME/projects/tangle-chat
+
+# SNPS commands
+alias vpn="wsl.exe -d wsl-vpnkit --cd /app wsl-vpnkit"
+
+# SNPS telepresence
+alias telc="telepresence connect --kubeconfig=/home/berenger/.kube/us"
+alias tel1="telepresence list -n sigma | grep -oP \".*(?=-slm-ui)\""
+alias tel2="telepresence list -n sigma | grep -oP \".*-slm-ui\""
+alias teli="telepresence intercept ${1:-uidev}-slm-ui --port 4200:80"
+alias tell="telepresence leave ${1:-uidev}-slm-ui"
+alias telq="telepresence quit -s"
+
+# SNPS folders
+export sda=$HOME/projects/siscape
+export ui=$HOME/projects/front/ui
+export uic=$HOME/projects/front/ui-container
+export common=$HOME/projects/front/common
+export ds=$HOME/projects/front/design-system
+export sds=$HOME/projects/front/design-system
 

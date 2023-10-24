@@ -26,6 +26,7 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # WSL
 export BROWSER=wslview
+export EDITOR='notepad'
 # WSL end
 
 # Java

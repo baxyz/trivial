@@ -1,0 +1,53 @@
+[user]
+	signingkey = 41A36B1A78004EA1
+	name = Bérenger
+	email = berenger@synopsys.com
+[commit]
+	gpgsign = true
+[status]
+	submoduleSummary = true
+[core]
+	editor = code --wait
+	compression = 9
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
+[merge "pnpm-merge-driver"]
+	name = automatically merge pnpm lockfiles
+	driver = pnpm-merge-driver %A %O %B %P
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
+[alias]
+	count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"

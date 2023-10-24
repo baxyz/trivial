@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Snaps
-sudo snap install node --channel=20/stable --classic
+sudo snap install node --classic
 sudo snap install firefox
 sudo snap install go --classic
 sudo snap install deno
@@ -24,7 +24,9 @@ sudo apt install \
     # WSLu
     wslu \
     # ZSH
-    zsh
+    zsh \
+    # Games
+    bastet yayagram
 
 # Change bash to zsh
 sudo -s
