@@ -1,0 +1,22 @@
+[user]
+	email = berenger@arnaud.xyz
+	name = Bérenger
+	signingkey = B00FF71BB42A6469
+[commit]
+	gpgsign = true
+[help]
+	autocorrect = 1
+[core]
+	autocrlf = false
+	editor = code --wait
+[gpg]
+	program = gpg2
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[init]
+	defaultBranch = main

@@ -77,7 +77,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases docker git git-auto-fetch node pip pipenv python)
+plugins=(common-aliases docker git git-auto-fetch node pip pipenv python sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,82 +106,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# some more ls aliases
-
 
 # Config
 unsetopt share_history
-
-# NPM
-export NPM_PACKAGES="/home/berenger/.npm-packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
-export PATH="$NPM_PACKAGES/bin:$PATH"
-
-# Unset manpath so we can inherit from /etc/manpath via the `manpath`
-# command
-unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-
-alias ll='ls -alF'
-
-alias notepad="Notepads.exe"
-alias edit="Notepads.exe"
-export EDITOR='notepad'
-alias shutdown='wsl.exe --shutdown'
-alias wsl='wsl.exe'
-alias snps='wsl.exe -d wsl-vpnkit --cd /app wsl-vpnkit'
-alias vpn='wsl.exe -d wsl-vpnkit --cd /app wsl-vpnkit'
-alias explorer='explorer.exe .'
-
-alias theip="ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
-alias clean="printf '\033\143'"
-
-alias npm-upgrade="npx npm-check --global --update-all"
-
-alias rebase="git rebase -i --autosquash origin/HEAD"
-alias push="git push --force"
-alias fixup="git commit --fixup "
-
-alias tetris="bastet"
-alias nonogram="yayagram"
-
-alias telc="telepresence connect --kubeconfig=/home/berenger/.kube/us"
-alias tel1="telepresence list -n sigma | grep -oP \".*(?=-slm-ui)\""
-alias tel2="telepresence list -n sigma | grep -oP \".*-slm-ui\""
-alias teli="telepresence intercept ${1:-uidev}-slm-ui --port 4200:80"
-alias tell="telepresence leave ${1:-uidev}-slm-ui"
-alias telq="telepresence quit -s"
-
 
 # Aliases in cd command
 # setopt autocd
 setopt cdablevars
 # setopt correct
 
-export sda=$HOME/projects/siscape
-export ui=$HOME/projects/front/ui
-export uic=$HOME/projects/front/ui-container
-export common=$HOME/projects/front/common
-export ds=$HOME/projects/front/design-system
-export sds=$HOME/projects/front/design-system
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Profile definitions.
+[[ ! -f ~/trivial/sh/.profile ]] || source ~/trivial/sh/.profile
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
-# pnpm
-# -> pnpm: path
-# >> moved into .profile
-# export PNPM_HOME="/home/berenger/.local/share/pnpm"
-# export PATH="$PNPM_HOME:$PATH"
-# -> pnpm: autocomplete
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-# pnpm end
+# Alias definitions.
+[[ ! -f ~/trivial/sh/.aliases ]] || source ~/trivial/sh/.aliases
