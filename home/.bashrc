@@ -104,9 +104,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-if [ -f ~/trivial/sh/.aliases ]; then
-    . ~/trivial/sh/.aliases
-fi
 
 # Local profile
 if [ -f ~/trivial/sh/.aliases ]; then

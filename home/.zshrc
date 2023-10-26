@@ -124,3 +124,6 @@ setopt cdablevars
 
 # Alias definitions.
 [[ ! -f ~/trivial/sh/.aliases ]] || source ~/trivial/sh/.aliases
+
+# Script definitions.
+[[ ! -f ~/trivial/sh/.zsh ]] || source ~/trivial/sh/.zsh
