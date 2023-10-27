@@ -17,8 +17,8 @@ export PATH=$PATH:/snap/bin
 # Snap end
 
 # NPM
-[ -d "$HOME/.npm-packages" ] || mkdir "$HOME/.npm-packages"
-export NPM_PACKAGES="$HOME/.npm-packages"
+[ -d "$HOME/.npm-global" ] || mkdir "$HOME/.npm-global"
+export NPM_PACKAGES="$HOME/.npm-global"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
