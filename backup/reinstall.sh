@@ -25,7 +25,7 @@ sudo apt upgrade
 # Missing packages
 sudo apt install \
     # OS
-    zsh gnupg2 git \
+    zsh gnupg2 git bat \
     # OS WSL
     wslu \
     # OS GUI
