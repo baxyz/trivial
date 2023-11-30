@@ -1,10 +1,13 @@
 #!/bin/bash
 
 # Snaps dev
+sudo snap install htop
+sudo snap install kubectl
 sudo snap install node --classic
-sudo snap install firefox
-sudo snap install go --classic
 sudo snap install deno
+sudo snap install firefox
+sudo snap install chromium
+sudo snap install go --classic
 sudo snap install openjdk
 
 # Snaps games
@@ -34,6 +37,7 @@ sudo apt install \
 # Zsh extra
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/ntnyq/omz-plugin-pnpm.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/pnpm
 
 # Node
 npm install -g \

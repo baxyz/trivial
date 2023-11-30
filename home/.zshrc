@@ -77,7 +77,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases docker git git-auto-fetch node pip pipenv python sudo)
+plugins=(common-aliases docker git git-auto-fetch node pip pipenv pnpm python sudo)
 
 source $ZSH/oh-my-zsh.sh
 
