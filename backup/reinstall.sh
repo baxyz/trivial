@@ -32,7 +32,10 @@ sudo apt install \
     # OS WSL
     wslu \
     # OS GUI
-    gnome-control-center gnome-tweaks
+    gnome-control-center gnome-tweaks \
+    # Fonts
+    fonts-cmu
+    
 
 # Zsh extra
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
