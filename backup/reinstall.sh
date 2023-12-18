@@ -9,6 +9,7 @@ sudo snap install firefox
 sudo snap install chromium
 sudo snap install go --classic
 sudo snap install openjdk
+sudo snap install diff-so-fancy
 
 # Snaps games
 sudo snap install bastet
