@@ -1,22 +1,24 @@
 #!/bin/bash
 
-# Snaps dev
+# Snaps bash
 sudo snap install htop
+sudo snap install jq --edge
+
+# Snaps GUI
+sudo snap install firefox
+sudo snap install chromium
+sudo snap install snap-store
+
+# Snaps dev
 sudo snap install kubectl
 sudo snap install node --classic
 sudo snap install deno
-sudo snap install firefox
-sudo snap install chromium
 sudo snap install go --classic
 sudo snap install openjdk
 sudo snap install diff-so-fancy
 
 # Snaps games
 sudo snap install bastet
-
-# Snaps GUI
-sudo snap install chromium
-sudo snap install snap-store
 
 # Missing repo
 sudo add-apt-repository ppa:git-core/ppa # newest git for WSL
