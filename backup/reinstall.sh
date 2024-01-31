@@ -16,6 +16,7 @@ sudo snap install deno
 sudo snap install go --classic
 sudo snap install openjdk
 sudo snap install diff-so-fancy
+sudo snap install json-tui
 
 # Snaps games
 sudo snap install bastet
@@ -31,7 +32,7 @@ sudo apt upgrade
 # Missing packages
 sudo apt install \
     # OS
-    zsh gnupg2 git bat \
+    zsh gnupg2 git bat sshfs \
     # OS WSL
     wslu \
     # OS GUI
