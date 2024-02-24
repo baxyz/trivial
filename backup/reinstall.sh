@@ -35,6 +35,8 @@ sudo apt install \
     zsh gnupg2 git bat sshfs \
     # OS WSL
     wslu \
+    # Security
+    paperkey \
     # OS GUI
     gnome-control-center gnome-tweaks \
     # Fonts
@@ -59,3 +61,8 @@ echo "Install theme: https://www.gnome-look.org/p/1574551/ or https://www.gnome-
 sudo -s
 chsh -s /bin/zsh root
 chsh -s /bin/zsh berenger
+
+# Restore gpg
+# ls -hl *.gpg
+gpg2 --import ~/trivial/backup/public.gpg
+gpg2 --import ~/trivial/backup/private.gpg

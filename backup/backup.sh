@@ -23,3 +23,7 @@ tar jcvf "$File" \
     .zshrc \
     backup.sh \
     reinstall.sh
+
+# Backup gpg
+gpg2 --export --export-options backup --output ~/trivial/backup/public.gpg
+gpg2 --export-secret-keys --export-options backup --output ~/trivial/backup/private.gpg
