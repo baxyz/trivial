@@ -10,6 +10,8 @@ sudo snap install chromium
 sudo snap install snap-store
 
 # Snaps dev
+sudo snap install glab
+sudo snap install gh
 sudo snap install kubectl
 sudo snap install node --classic
 sudo snap install deno
