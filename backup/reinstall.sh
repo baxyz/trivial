@@ -12,7 +12,7 @@ sudo snap install snap-store
 # Snaps dev
 sudo snap install glab
 sudo snap install gh
-sudo snap install kubectl
+sudo snap install kubectl --classic
 sudo snap install node --classic
 sudo snap install deno
 sudo snap install go --classic
