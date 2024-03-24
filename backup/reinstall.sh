@@ -53,6 +53,9 @@ npm install -g \
     npm-merge-driver @pnpm/merge-driver \
     @angular/cli
 
+# Bun
+curl -fsSL https://bun.sh/install | bash
+
 # Theme
 echo "Install theme: https://www.gnome-look.org/p/1574551/ or https://www.gnome-look.org/p/1544466"
 
