@@ -25,7 +25,6 @@ sudo snap install bastet
 
 # Missing repo
 sudo add-apt-repository ppa:git-core/ppa # newest git for WSL
-sudo add-apt-repository ppa:wslutilities/wslu # WSLu
 
 # Update systel
 sudo apt update
@@ -34,9 +33,7 @@ sudo apt upgrade
 # Missing packages
 sudo apt install \
     # OS
-    zsh gnupg2 git bat sshfs \
-    # OS WSL
-    wslu \
+    zsh gnupg2 git bat sshfs gpg2 \
     # Security
     paperkey \
     # OS GUI
