@@ -1,13 +1,14 @@
 #!/bin/bash
 
+# Restore files
+cp ~/.trivial/backup/home/* ~
+
 # Snaps bash
 sudo snap install htop
 sudo snap install jq --edge
 
 # Snaps GUI
 sudo snap install firefox
-sudo snap install chromium
-sudo snap install snap-store
 
 # Snaps dev
 sudo snap install glab
@@ -21,23 +22,26 @@ sudo snap install diff-so-fancy
 sudo snap install json-tui
 
 # Snaps games
-sudo snap install bastet
+
+# Flatpak
+flatpak install com.github.tchx84.Flatseal
+flatpak install it.mijorus.gearlever
 
 # Missing repo
 sudo add-apt-repository ppa:git-core/ppa # newest git for WSL
 
-# Update systel
+# Update system
 sudo apt update
 sudo apt upgrade
 
 # Missing packages
 sudo apt install \
     # OS
-    zsh gnupg2 git bat sshfs gpg2 \
+    zsh gnupg2 git bat sshfs \
     # Security
     paperkey \
     # OS GUI
-    gnome-control-center gnome-tweaks \
+    gnome-control-center gnome-tweaks gnome-browser-connector \
     # Fonts
     fonts-cmu
     
@@ -66,5 +70,10 @@ chsh -s /bin/zsh berenger
 
 # Restore gpg
 # ls -hl *.gpg
-gpg2 --import ~/trivial/backup/public.gpg
-gpg2 --import ~/trivial/backup/private.gpg
+gpg2 --import ~/.trivial/backup/public.gpg
+gpg2 --import ~/.trivial/backup/private.gpg
+
+# Manual installation
+open https://extensions.gnome.org/extension/1319/gsconnect/
+open https://github.com/AppImage/AppImageKit/wiki/FUSE
+open https://flatpak.org/setup/Ubuntu

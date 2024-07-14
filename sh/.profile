@@ -12,22 +12,13 @@ PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 # PERL end
 
-# Snap
-export PATH=$PATH:/snap/bin
-# Snap end
-
 # NPM
-[ -d "$HOME/.npm-global" ] || mkdir "$HOME/.npm-global"
-export NPM_PACKAGES="$HOME/.npm-global"
+[ -d "$HOME/.npm" ] || mkdir "$HOME/.npm"
+export NPM_PACKAGES="$HOME/.npm"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # NPM end
-
-# WSL
-export BROWSER=wslview
-export EDITOR='notepad'
-# WSL end
 
 # Java
 . $(openjdk)
