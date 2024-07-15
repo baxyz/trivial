@@ -3,9 +3,10 @@
 # Restore files
 cp ~/.trivial/backup/home/* ~
 
-# Snaps bash
+# Snaps OS
 sudo snap install htop
 sudo snap install jq --edge
+sudo snap install rclone
 
 # Snaps GUI
 sudo snap install firefox
@@ -38,6 +39,8 @@ sudo apt upgrade
 sudo apt install \
     # OS
     zsh gnupg2 git bat sshfs \
+    # Basics
+    p7zip-full \
     # Security
     paperkey \
     # OS GUI
@@ -69,9 +72,14 @@ chsh -s /bin/zsh root
 chsh -s /bin/zsh berenger
 
 # Restore gpg
-# ls -hl *.gpg
+7z x ~/.trivial/backup/gpg2.7z -o~/.trivial/backup/
 gpg2 --import ~/.trivial/backup/public.gpg
 gpg2 --import ~/.trivial/backup/private.gpg
+
+# Restore rclone
+7z x ~/.trivial/backup/rclone.7z -o~/.trivial/backup/
+mkdir -p ~/snap/rclone/current/.config/rclone/
+cp ~/.trivial/backup/rclone.conf ~/snap/rclone/current/.config/rclone/rclone.conf
 
 # Manual installation
 open https://extensions.gnome.org/extension/1319/gsconnect/
