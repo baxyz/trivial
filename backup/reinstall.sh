@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Restore files
+# Restore config
 cp ~/.trivial/backup/home/* ~
 
 # Snaps OS
@@ -8,7 +8,7 @@ sudo snap install htop
 sudo snap install jq --edge
 sudo snap install rclone
 
-# Snaps GUI
+# Snaps Internet
 sudo snap install firefox
 
 # Snaps dev
@@ -23,6 +23,25 @@ sudo snap install diff-so-fancy
 sudo snap install json-tui
 
 # Snaps games
+sudo snap install geforcenow
+
+# Snaps communication
+sudo snap install discord
+sudo snap install slack
+sudo snap install signal-desktop
+
+# Snaps media
+sudo snap install spotify
+sudo snap install vlc
+sudo snap install mpv
+
+# Snaps desktop
+sudo snap install todoist
+sudo snap install gnome-weather
+sudo snap install gnome-system-monitor
+sudo snap install noson
+sudo snap install metadata-cleaner
+
 
 # Flatpak
 flatpak install com.github.tchx84.Flatseal
@@ -62,9 +81,6 @@ npm install -g \
 
 # Bun
 curl -fsSL https://bun.sh/install | bash
-
-# Theme
-echo "Install theme: https://www.gnome-look.org/p/1574551/ or https://www.gnome-look.org/p/1544466"
 
 # Change bash to zsh
 sudo -s
