@@ -17,6 +17,7 @@ sudo snap install gh
 sudo snap install kubectl --classic
 sudo snap install node --classic
 sudo snap install deno
+sudo snap install bun-js
 sudo snap install go --classic
 sudo snap install openjdk
 sudo snap install diff-so-fancy
@@ -41,7 +42,7 @@ sudo snap install gnome-weather
 sudo snap install gnome-system-monitor
 sudo snap install noson
 sudo snap install metadata-cleaner
-
+sudo snap install standard-notes
 
 # Flatpak
 flatpak install com.github.tchx84.Flatseal
@@ -74,10 +75,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone --depth=1 https://github.com/ntnyq/omz-plugin-pnpm.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/pnpm
 
 # Node
-npm install -g \
-    npm yarn pnpm \
+npm install -g npm \
     npm-merge-driver @pnpm/merge-driver \
     @angular/cli
+corepack enable pnpm
+corepack enable yarn
 
 # Bun
 curl -fsSL https://bun.sh/install | bash
