@@ -1,7 +1,7 @@
 [user]
 	name = Bérenger
-	email = berenger@arnaud.xyz
-	signingkey = 2E91785B5328E535
+	email = berenger@arnaud.work
+	signingkey = 4B4EA4239BE8EBC0
 [commit]
 	gpgsign = true
 [help]
