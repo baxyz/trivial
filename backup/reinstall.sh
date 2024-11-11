@@ -5,11 +5,16 @@ cp ~/.trivial/backup/home/* ~
 
 # Snaps OS
 sudo snap install htop
-sudo snap install jq --edge
+sudo snap install jq
 sudo snap install rclone
+sudo snap install curl
 
 # Snaps Internet
 sudo snap install firefox
+#sudo snap install epiphany // using apt since web app is not working
+
+# Put high priority on Firefox
+sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser /usr/bin/firefox 300
 
 # Snaps dev
 sudo snap install glab
@@ -30,6 +35,7 @@ sudo snap install geforcenow
 sudo snap install discord
 sudo snap install slack
 sudo snap install signal-desktop
+sudo snap install zoom-client
 
 # Snaps media
 sudo snap install spotify
@@ -42,11 +48,15 @@ sudo snap install gnome-weather
 sudo snap install gnome-system-monitor
 sudo snap install noson
 sudo snap install metadata-cleaner
-sudo snap install standard-notes
+sudo snap install standard-notes && snap connect standard-notes:password-manager-service
+
+# Flatpak - prerequisites
+open https://flatpak.org/setup/Ubuntu
 
 # Flatpak
-flatpak install com.github.tchx84.Flatseal
-flatpak install it.mijorus.gearlever
+flatpak install com.github.tchx84.Flatseal -y
+flatpak install it.mijorus.gearlever -y
+flatpak install re.sonny.Commit -y
 
 # Missing repo
 sudo add-apt-repository ppa:git-core/ppa # newest git for WSL
@@ -58,16 +68,20 @@ sudo apt upgrade
 # Missing packages
 sudo apt install \
     # OS
-    zsh gnupg2 git bat sshfs \
+    ubuntu-restricted-extras build-essential \
+    zsh gnupg2 git bat sshfs exfatprogs \
     # Basics
     p7zip-full \
+    # Web
+    epiphany-browser \
     # Security
     paperkey \
+    # Gaming
+    meson libsystemd-dev pkg-config ninja-build libdbus-1-dev libinih-dev gamemode \
     # OS GUI
     gnome-control-center gnome-tweaks gnome-browser-connector \
     # Fonts
     fonts-cmu
-    
 
 # Zsh extra
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -82,9 +96,6 @@ npm install -g npm \
     @angular/cli
 corepack enable pnpm
 corepack enable yarn
-
-# Bun
-curl -fsSL https://bun.sh/install | bash
 
 # Change bash to zsh
 sudo -s
@@ -103,5 +114,7 @@ cp ~/.trivial/backup/rclone.conf ~/snap/rclone/current/.config/rclone/rclone.con
 
 # Manual installation
 open https://extensions.gnome.org/extension/1319/gsconnect/
+open https://extensions.gnome.org/extension/7236/firefox-profiles/
+open https://extensions.gnome.org/extension/1852/gamemode/
 open https://github.com/AppImage/AppImageKit/wiki/FUSE
-open https://flatpak.org/setup/Ubuntu
+open https://help.ubuntu.com/community/RestrictedFormats/PlayingDVDs
