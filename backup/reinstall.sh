@@ -69,7 +69,7 @@ sudo apt upgrade
 sudo apt install \
     # OS
     ubuntu-restricted-extras build-essential \
-    zsh gnupg2 git bat sshfs exfatprogs \
+    zsh gnupg2 git bat sshfs exfatprogs pipx \
     # Basics
     p7zip-full \
     # Web
@@ -96,6 +96,9 @@ npm install -g npm \
     @angular/cli
 corepack enable pnpm
 corepack enable yarn
+
+# Python
+pipx install soco-cli # sonos
 
 # Change bash to zsh
 sudo -s
